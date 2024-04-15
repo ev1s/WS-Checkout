@@ -1,0 +1,115 @@
+.content__col-left {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+.content__col-left-body {
+    width: 260px;
+    height: 100%;
+}
+.content__col-mid {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    background: #f9f9fa;
+    overflow: hidden;
+}
+.content__col-mid-body {
+    padding: 150px 60px;
+}
+.content__col-right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+.content__col-right-body {
+    width: 275px;
+    height: 100%;
+    padding: 150px 40px 150px 30px;
+}
+
+
+.feed_my_sort .feed__item:nth-child(2){
+    order: -1
+}
+.content__col-single {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    background: #f9f9fa;
+    overflow: hidden;
+}
+.content__col-single-body {
+    padding: 150px 300px;
+}
+.content__col-single .container {
+    max-width: 1155px;
+}
+.page__heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 2px solid #e5e5eb;
+    padding-bottom: 50px;
+    margin-bottom: 80px;
+}
+.page__heading h2, .page__heading .h2 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-bottom: 0;
+}
+h2, .h2 {
+    font-size: 45px;
+    margin: 0 0 30px;
+}
+
+.bx-authform-input-container ,
+.form__label {
+    position: relative;
+}
+.bx-authform-input-container .eye.active:after,
+.form__label .eye.active:after{
+    opacity: 0;
+}
+.bx-authform-input-container .eye.active.
+.form__label .eye.active{
+    opacity: 1;
+}
+.bx-authform-input-container .eye:hover,
+.form__label .eye:hover{
+    opacity: 1;
+}
+.bx-authform-input-container .eye svg,
+.form__label .eye svg{
+    display: block;
+}
+.bx-authform-input-container .eye:after,
+.form__label .eye:after{
+    content: '';
+    width: 100%;
+    background: #000;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+    left: 50%;
+    height: 1px;
+}
+.bx-authform-input-container .eye,
+.form__label .eye{
+    transition: all 0.2s ease-in-out;
+    margin-top: 15px;
+    position: absolute;
+    opacity: .5;
+    cursor: pointer;
+    top: 50%;transform: translateY(-50%);
+    right: 20px;
+}
+
+.bx-authform-input-container .eye{
+    margin-top: 0;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
