@@ -4,8 +4,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Checkout</title>
+
+		<!-- OLD STYLES -->
 		<link href="legacy/css/styles.css" rel="stylesheet" />
 		<link href="legacy/css/template_styles.css" rel="stylesheet" />
+		<link rel="shortcut icon" type="image/x-icon" href="legacy/img/favicon.ico" />
+		<!-- /OLD STYLES -->
+
+
+		<!-- NEW STYLES-->
+		<link href="css/styles.css" rel="stylesheet" />
+		<!-- /NEW STYLES-->
+
 	</head>
 	<body>
 		<div class="wrapper" id="site-wrapper">
@@ -53,8 +63,7 @@
 							<form action="/search/" class="search__form">
 								<div class="search__input-wrapper">
 									<div class="search__submit">
-										<svg class="header__control-link-icon" width="20" height="20"><use xlink:href="#search"></use></svg
-										><span class="header__control-link-name">Поиск</span>
+										<svg class="header__control-link-icon" width="20" height="20"><use xlink:href="#search"></use></svg><span class="header__control-link-name">Поиск</span>
 									</div>
 									<input
 										aria-autocomplete="both"
@@ -117,15 +126,12 @@
 					</div>
 					<div class="header__auth header__control">
 						<a href="#" class="header__control-link popup__toggle" data-target="login-popup"
-							><svg class="header__control-link-icon" width="20" height="25"><use xlink:href="#person"></use></svg
-							><span class="header__control-link-name">Войти</span></a
-						>
+							><svg class="header__control-link-icon" width="20" height="25"><use xlink:href="#person"></use></svg><span class="header__control-link-name">Войти</span></a>
 					</div>
 					<div class="header__cart header__control">
 						<div class="popover js-popover">
 							<div class="header__control-link popover__anchor">
-								<span class="header__cart-count">2</span><svg class="header__control-link-icon" width="25" height="25"><use xlink:href="#cart"></use></svg
-								><span class="header__control-link-name">Корзина</span>
+								<span class="header__cart-count">2</span><svg class="header__control-link-icon" width="25" height="25"><use xlink:href="#cart"></use></svg><span class="header__control-link-name">Корзина</span>
 							</div>
 							<div class="popover__body">
 								<div class="popover__content">
@@ -158,146 +164,213 @@
 				</div>
 			</header>
 			<main class="content">
-				<div class="cart">
+				<div class="cart checkout">
 					<div class="cart__header">
-						<h1 class="h1">Доставка</h1>
+						<h1 class="h1">Оформление заказа</h1>
 						<div class="cart__progress">
 							<div class="cart__progress-item cart__progress-item_done">
-								<span class="text-icon"
-									><svg width="19" height="17"><use xlink:href="#cart"></use></svg>Корзина</span
-								>
+								<span class="text-icon">
+									<svg width="19" height="17"><use xlink:href="#cart"></use></svg>
+									Корзина
+								</span>
 							</div>
 							<div class="cart__progress-item cart__progress-item_done">
-								<span class="text-icon"
-									><svg width="19" height="17"><use xlink:href="#truck"></use></svg>Доставка</span
-								>
+								<span class="text-icon">
+									<svg width="19" height="17"><use xlink:href="#card"></use></svg>
+									Оформление
+								</span>
 							</div>
 							<div class="cart__progress-item">
-								<span class="text-icon"
-									><svg width="19" height="17"><use xlink:href="#card"></use></svg>Оплата</span
-								>
-							</div>
-							<div class="cart__progress-item">
-								<span class="text-icon"
-									><svg width="19" height="17"><use xlink:href="#flower-done"></use></svg>Заказ оформлен</span
-								>
+								<span class="text-icon">
+									<svg width="19" height="17"><use xlink:href="#flower-done"></use></svg>
+									Заказ оформлен
+								</span>
 							</div>
 						</div>
 					</div>
 					<div class="cart__content">
 						<div class="cart__content-left">
-							<div class="tabs tabs_3 js-tabs" role="tablist">
-								<ul class="tabs__tablist">
-									<li class="tabs__tablist-item tabs__tablist-item_active" role="tab" id="courier-tab" aria-controls="courier">
-										<div class="tabs__tablist-item-title h3">Курьерская</div>
-										<div class="tabs__tablist-item-sum active1">350 ₽</div>
-										<div class="tabs__tablist-item-desc">Завтра (2 октября)</div>
-									</li>
-									<li class="tabs__tablist-item" role="tab" id="pickup-tab" aria-controls="pickup">
-										<div class="tabs__tablist-item-title h3">Самовывоз</div>
-										<div class="tabs__tablist-item-sum active1">Бесплатно</div>
-										<div class="tabs__tablist-item-desc">Сегодня (1 октября)</div>
-									</li>
-									<li class="tabs__tablist-item" role="tab" id="post-tab" aria-controls="post">
-										<div class="tabs__tablist-item-title h3">Почта России</div>
-										<div class="tabs__tablist-item-sum active1">3 500 ₽</div>
-										<div class="tabs__tablist-item-desc">Дней 10</div>
-									</li>
-								</ul>
+							<div class="tabs tabs_3 js-tabs">
 								<div class="tabs__content white-box">
 									<div class="tabs__pane tabs__pane_active" role="tabpanel" id="courier" aria-labelledby="courier-tab">
 										<div class="form">
 											<fieldset class="form__fieldset">
-												<legend class="form__legend h4">Выберите курьера</legend>
-												<label class="dashed-radio"
-													><input class="dashed-radio__input" type="radio" name="courier" value="pony-express" checked="true" />
-													<div class="dashed-radio__name">Pony Express</div>
-													<div class="dashed-radio__value">350 ₽</div></label
-												><label class="dashed-radio"
-													><input class="dashed-radio__input" type="radio" name="courier" value="sdek" />
-													<div class="dashed-radio__name">СДЭК</div>
-													<div class="dashed-radio__value">500 ₽</div></label
-												><label class="dashed-radio"
-													><input class="dashed-radio__input" type="radio" name="courier" value="i2hard" />
-													<div class="dashed-radio__name">i2HARD Deliveries</div>
-													<div class="dashed-radio__value">1 000 ₽</div></label
-												>
+												<legend class="form__legend h2">Контактная информация</legend>
+												<p class="hint">
+													Вы можете войти под своим логином, зарегистрироваться или ввести данные в форме ниже. В таком случае аккаунт будет создан автоматически
+												</p>
+												<div class="checkout__auth">
+													<a class="button button_icon">
+														Авторизоваться
+														<svg width="19" height="17"><use xlink:href="#person"></use></svg>
+													</a>
+												</div>
+												<div class="user-contact">
+													<div class="input-with-placeholder">
+														<label for="user_name">
+															Имя
+															<input type="text" value="" id="user_name" placeholder="Имя" />
+														</label>
+													</div>
+
+													<div class="input-with-placeholder">
+														<label for="">
+															Телефон
+															<input type="text" value="" placeholder="Телефон" />
+														</label>
+													</div>
+
+													<div class="input-with-placeholder">
+														<label for="">
+															Почта
+															<input type="text" value="" placeholder="Почта" />
+														</label>
+													</div>
+												</div>
 											</fieldset>
 											<fieldset class="form__fieldset">
-												<legend class="form__legend h4">Контактная информация</legend>
-												<p class="hint">
-													Вы можете войти под своим логином, зарегистрироваться или ввести данные в форме ниже. В таком случае аккаунт будет создан
-													автоматически
-												</p>
-												<div class="mt20">
-													<div class="feed feed_2 feed_indent_20">
-														<div class="feed__item feed__item_100">
-															<div class="form__block">
-																<label for="" class="form__label label">Имя и фамилия<input type="text" value="" class="form__input input-text" /> </label>
+												<legend class="form__legend h2">Способ получения</legend>
+												<div class="delivery-selector">
+													<input type="hidden" name="shipping" value="pickup" />
+													<div class="delivery-selector__title">
+														<div class="delivery-selector__name"><i class="icon icon_pickup"><!-- icon_pickup / icon_delivery / icon_pickup-point --></i> Самовывоз из офиса</div>
+														<a href="#" class="delivery-selector__change">Изменить</a>
+													</div>
+													<div class="delivery-selector__address">г. Москва, Северодвинская ул., 21</div>
+													<div class="delivery-selector__contact-info">
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">Режим работы</div>
+															<div class="delivery-selector__contact-value">Пн-пт: 10:00—19:00</div>
+														</div>
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">Телефон</div>
+															<div class="delivery-selector__contact-value">8 (800) 201-36-70</div>
+														</div>
+													</div>
+												</div>
+											</fieldset>
+											<fieldset class="form__fieldset">
+												<legend class="form__legend h2">Способ оплаты</legend>
+
+												<div class="payments-filter">
+													<div data-payments="online" class="payments-filter__option payments-filter__option_selected">Онлайн-оплата</div>
+													<div data-payments="credit" class="payments-filter__option">Кредит и рассрочка</div>
+													<div data-payments="split" class="payments-filter__option">Сплит</div>
+													<div data-payments="business" class="payments-filter__option">Для бизнеса</div>
+												</div>
+
+												<div class="h4">Выберите тип оплаты</div>
+												<fieldset class="box-radio__fieldset">
+													<label class="box-radio">
+														<input class="box-radio__input" type="radio" name="payment" value="sbp" checked="true">
+														<div class="box-radio__container">
+															<div class="box-radio__name">
+																<div class="box-radio__image">
+																	<img src="" alt="">
+																</div>
+																СБП
+															</div>
+															<div class="box-radio__description">
+																Быстро и без комиссий. Отсканируйте QR-код с помощью мобильного приложения своего
 															</div>
 														</div>
-														<div class="feed__item">
-															<div class="form__block">
-																<label for="" class="form__label label">Телефон<input type="text" alue="" class="form__input input-text" /> </label>
+														<a class="box-radio__link">
+															Подробнее
+														</a>
+													</label>
+
+													<label class="box-radio">
+														<input class="box-radio__input" type="radio" name="payment" value="card">
+														<div class="box-radio__container">
+															<div class="box-radio__name">
+																<div class="box-radio__image">
+																	<img src="" alt="">
+																</div>
+																Оплата банковской картой
+															</div>
+															<div class="box-radio__description">
+																Доступные способы онлайн-оплаты: Мир, Visa, Mastercard, СБП, SberPay, Тинькофф, ЮMoney.
 															</div>
 														</div>
-														<div class="feed__item">
-															<div class="form__block">
-																<label for="" class="form__label label">Почта<input type="email" value="" class="form__input input-text" /> </label>
+														<a class="box-radio__link">
+															Подробнее
+														</a>
+													</label>
+												</fieldset>
+
+												<div class="checkout__coupon">
+													<label for="" class="form__label label">
+														<input type="email" value="" class="form__input input-text" placeholder="Промокод" />
+													</label>
+													<button class="button">Применить</button>
+												</div>
+											</fieldset>
+
+											<fieldset class="form__fieldset confirmation">
+												<legend class="form__legend h2">Варианты подтверждения заказа</legend>
+												<div class="confirmation__container">
+													<div class="confirmation__call">
+														Звонок оператора
+														<div class="checkbox-mob checkbox-mob_checked"></div>
+													</div>
+													<div class="confirmation__notifications">
+														Уведомления о заказе
+														<div class="notifications-radio">
+															<div data-notifications="sms" class="notifications-radio__option notifications-radio__option_selected" title="СМС-сообщения">
+																<i class="icon icon_sms"></i>
+															</div>
+															<div data-notifications="vk" class="notifications-radio__option" title="Вконтакте">
+																<i class="icon icon_vk"></i>
+															</div>
+															<div data-notifications="telegram" class="notifications-radio__option" title="Telegram">
+																<i class="icon icon_telegram"></i>
+															</div>
+															<div data-notifications="whatsapp" class="notifications-radio__option" title="WhatsApp">
+																<i class="icon icon_whatsapp"></i>
 															</div>
 														</div>
 													</div>
 												</div>
 											</fieldset>
-											<fieldset class="form__fieldset address-form">
-												<legend class="form__legend h4">Адрес доставки</legend>
-												<div class="mt20">
-													<div class="feed feed_3 feed_indent_20">
-														<div class="feed__item">
-															<div class="form__block">
-																<label class="form__label label">Город</label>
-																<div class="form__select">
-																	<select class="form__input">
-																		<option value="Москва">Москва</option>
-																		<option value="Пенза">Пенза</option>
-																	</select>
-																</div>
-															</div>
-														</div>
-														<div class="feed__item feed__item_66">
-															<div class="form__block">
-																<label for="" class="form__label label">Улица<input type="text" alue="" class="form__input input-text" /> </label>
-															</div>
-														</div>
-														<div class="feed__item address-form__home">
-															<div class="form__block">
-																<label for="" class="form__label label">Дом<input type="text" alue="" class="form__input input-text" /> </label>
-															</div>
-														</div>
-														<div class="feed__item address-form__build">
-															<div class="form__block">
-																<label for="" class="form__label label"
-																	>Корпус <span class="desktop-only">или строение</span><input type="text" alue="" class="form__input input-text" />
-																</label>
-															</div>
-														</div>
-														<div class="feed__item">
-															<div class="form__block">
-																<label for="" class="form__label label">Квартира<input type="email" value="" class="form__input input-text" /> </label>
-															</div>
-														</div>
-														<div class="feed__item feed__item_100">
-															<div class="form__block">
-																<label for="" class="form__label label"
-																	>Комментарий, если нужно<input type="text" value="" class="form__input input-text" />
-																</label>
-															</div>
-														</div>
-													</div>
-												</div>
+
+											<fieldset class="form__fieldset terms">
+												<label class="checkbox assemblies__controls-item">
+													<input class="checkbox__input" type="checkbox" checked="">
+													<span class="checkbox__text">Я соглашаюсь с&nbsp;<a href=""> условиями оферты </a>&nbsp;и&nbsp;<a href="">политикой конфиденциальности</a></span>
+												</label>
 											</fieldset>
 										</div>
 									</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 									<div class="tabs__pane" role="tabpanel" id="pickup" aria-labelledby="pickup-tab">iframe</div>
 									<div class="tabs__pane" role="tabpanel" id="post" aria-labelledby="post-tab">
 										<div class="form">
@@ -409,41 +482,34 @@
 							</div>
 							<div class="footer__scroll-top">
 								<a href="#site-wrapper" class="footer__scroll-top-link link"
-									>Наверх<svg width="8" height="5"><use xlink:href="#arrow-top"></use></svg
-								></a>
+									>Наверх<svg width="8" height="5"><use xlink:href="#arrow-top"></use></svg></a>
 							</div>
 						</div>
 						<div class="footer__social">
 							<ul class="menu menu_social">
 								<li class="menu__item menu__item_social">
 									<a href="https://vk.com/i2hard" class="menu__img" rel="”nofollow”" target="_blank"
-										><svg width="23" height="14"><use xlink:href="#vk"></use></svg
-									></a>
+										><svg width="23" height="14"><use xlink:href="#vk"></use></svg></a>
 								</li>
 								<li class="menu__item menu__item_social">
 									<a href="https://www.youtube.com/user/i2hard" class="menu__img" rel="”nofollow”" target="_blank"
-										><svg width="23" height="16"><use xlink:href="#youtube"></use></svg
-									></a>
+										><svg width="23" height="16"><use xlink:href="#youtube"></use></svg></a>
 								</li>
 								<li class="menu__item menu__item_social">
 									<a href="https://www.instagram.com/i2hard/" class="menu__img" rel="”nofollow”" target="_blank"
-										><svg width="20" height="20"><use xlink:href="#instagram"></use></svg
-									></a>
+										><svg width="20" height="20"><use xlink:href="#instagram"></use></svg></a>
 								</li>
 								<li class="menu__item menu__item_social">
 									<a href="https://telegram.me/i2hard" class="menu__img" rel="”nofollow”" target="_blank"
-										><svg width="20" height="17"><use xlink:href="#telegram"></use></svg
-									></a>
+										><svg width="20" height="17"><use xlink:href="#telegram"></use></svg></a>
 								</li>
 								<li class="menu__item menu__item_social">
 									<a href="https://zen.yandex.ru/i2hard" class="menu__img" rel="”nofollow”" target="_blank"
-										><svg width="20" height="20"><use xlink:href="#zen"></use></svg
-									></a>
+										><svg width="20" height="20"><use xlink:href="#zen"></use></svg></a>
 								</li>
 								<li class="menu__item menu__item_social">
 									<a href="https://www.facebook.com/I2Hard" class="menu__img" rel="”nofollow”" target="_blank"
-										><svg width="10" height="20"><use xlink:href="#fb"></use></svg
-									></a>
+										><svg width="10" height="20"><use xlink:href="#fb"></use></svg></a>
 								</li>
 							</ul>
 						</div>
@@ -578,11 +644,9 @@
 				<div class="popup__footer">
 					<div class="form-openid">
 						<a href="#" class="form-openid__item">
-							<span class="form-openid__item-title">Вконтакте</span><svg width="25" height="15" color="#5181B8"><use xlink:href="#vk"></use></svg
-						></a>
+							<span class="form-openid__item-title">Вконтакте</span><svg width="25" height="15" color="#5181B8"><use xlink:href="#vk"></use></svg></a>
 						<a href="#" class="form-openid__item"
-							><Mail class="Ru">OpenID</Mail><svg width="24" height="25" color="#EE323F"><use xlink:href="#mailru"></use></svg
-						></a>
+							><Mail class="Ru">OpenID</Mail><svg width="24" height="25" color="#EE323F"><use xlink:href="#mailru"></use></svg></a>
 					</div>
 				</div>
 			</div>
@@ -598,8 +662,7 @@
 								<input type="hidden" name="AUTH_FORM" value="Y" />
 								<input type="hidden" name="TYPE" value="REGISTRATION" />
 								<div class="form__block">
-									<label for="" class="form__label label"
-										>Имя<input
+									<label for="" class="form__label label">Имя<input
 											type="text"
 											name="USER_NAME"
 											maxlength="255"
