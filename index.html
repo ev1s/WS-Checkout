@@ -454,20 +454,86 @@
 						</div>
 						<div class="cart__content-right">
 							<div class="white-box">
-								<div class="cart__content-right-btn">
-									<a class="button" href="/cart-payment.html">Перейти к оформлению</a>
-									<p class="cart__content-right-btn-hint">Способ и время доставки можно выбрать при оформлении заказа</p>
-								</div>
 								<div class="cart__content-right-list">
-									<div class="cart__content-right-list-header h4">
-										<span>Ваша корзина</span><span class="cart__content-right-list-header-count">33 товара</span>
+									<div class="cart__content-right-product-container">
+										<div class="cart__content-right-product">
+											<div class="cart__content-right-product-image">
+												<img src="img/pc1.png" alt="Компьютер игровой WORKSHOP AQUA">
+											</div>
+											<div class="cart__content-right-product-title">
+												Компьютер игровой WORKSHOP AQUA
+											</div>
+											<div class="cart__content-right-product-price">
+												<div class="cart__content-right-product-price-total">
+													517 600 ₽
+												</div>
+												<div class="cart__content-right-product-price-single">
+													258 800 ₽ х2
+												</div>
+											</div>
+										</div>
+										<div class="cart__content-right-product">
+											<div class="cart__content-right-product-image">
+												<img src="img/pc2.png" alt="Компьютер игровой WORKSHOP AQUA">
+											</div>
+											<div class="cart__content-right-product-title">
+												Компьютер игровой WORKSHOP AQUA
+											</div>
+											<div class="cart__content-right-product-price">
+												<div class="cart__content-right-product-price-total">
+													66 100 ₽
+												</div>
+											</div>
+										</div>
+										<div class="cart__content-right-product">
+											<div class="cart__content-right-product-image">
+												<img src="img/pc3.png" alt="Компьютер игровой WORKSHOP AQUA">
+											</div>
+											<div class="cart__content-right-product-title">
+												Компьютер игровой WORKSHOP AQUA
+											</div>
+											<div class="cart__content-right-product-price">
+												<div class="cart__content-right-product-price-total">
+													48 100 ₽
+												</div>
+											</div>
+										</div>
+										<div class="cart__content-right-service">
+											<div class="cart__content-right-service-title">
+												+ Какая-то супер пупер мега услуга
+											</div>
+											<div class="cart__content-right-product-price">
+												<div class="cart__content-right-product-price-total">
+													20 000 ₽
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="cart__content-right-list-item"><span>Товары (3)</span><span>750 000 ₽</span></div>
-									<div class="cart__content-right-list-item"><span>Скидка</span><span class="active1">-25 000 ₽</span></div>
-									<div class="cart__content-right-list-item"><span>Промокод</span><span class="active1">-25 000 ₽</span></div>
-									<div class="cart__content-right-list-item"></div>
+									<div class="cart__content-right-list-header h4">
+										<span>Ваша корзина</span><span class="cart__content-right-list-header-count">4 товара</span>
+									</div>
+									<div class="cart__content-right-list-item-container">
+										<div class="cart__content-right-list-item">
+											<span>Товары (4)</span>
+											<span class="cart__content-right-list-item-price">651 000 ₽</span>
+										</div>
+										<div class="cart__content-right-list-item">
+											<span>Доставка</span>
+											<span class="cart__content-right-list-item-price">бесплатно</span>
+										</div>
+										<div class="cart__content-right-list-item">
+											<span>Скидка по промокоду</span>
+											<span class="cart__content-right-list-item-price cart__content-right-list-item-price_accent">-25 000 ₽</span>
+										</div>
+									</div>
 								</div>
-								<div class="cart__content-right-total h4"><span>Итого</span><span>700 000 ₽</span></div>
+								<div class="cart__content-right-total h4">
+									<span>Итого</span>
+									<span>631 800 ₽</span>
+								</div>
+								<div class="cart__content-right-btn">
+									<a class="button" href="#">Оформить заказ</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -564,93 +630,121 @@
 				</div>
 			</footer>
 		</div>
-		<div class="login-popup popup">
+
+
+
+
+		<div class="delivery-popup popup popup_open">
 			<div class="popup__wrapper">
 				<div class="popup__body popup__body_top-borders">
-					<div class="popup__title">Авторизация</div>
+					<div class="popup__title">Способ получения</div>
 					<a href="" class="popup__close"></a>
-					<div class="popup__form">
-						<div class="form">
-							<form name="form_auth" method="post" target="_top" action="/articles/?login=yes">
-								<input type="hidden" name="AUTH_FORM" value="Y" />
-								<input type="hidden" name="TYPE" value="AUTH" />
-								<input type="hidden" name="backurl" value="/articles/" />
-								<div class="form__block">
-									<label for="" class="form__label label"
-										>Войти<input
-											type="text"
-											name="USER_LOGIN"
-											maxlength="50"
-											value=""
-											autocomplete="username"
-											placeholder="username"
-											class="form__input input-text"
-										/>
-									</label>
-								</div>
-								<div class="form__block">
-									<label for="" class="form__label label"
-										>Пароль<span class="form__label-aside">
-											<a href="#" class="popup__toggle link" data-target="restore-popup">Забыли пароль?</a>
-										</span>
-										<input
-											type="password"
-											name="USER_PASSWORD"
-											maxlength="50"
-											autocomplete="current-password"
-											placeholder="*******"
-											class="form__input input-password"
-										/>
-									</label>
-								</div>
-								<div class="form__block">
-									<div class="g-recaptcha" data-sitekey="6LfHhqMUAAAAAE7gWMvMIaXZcwHShP91Q9of4td_">
-										<div style="width: 304px; height: 78px; margin: 0 auto">
-											<div>
-												<iframe
-													title="reCAPTCHA"
-													src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LfHhqMUAAAAAE7gWMvMIaXZcwHShP91Q9of4td_&amp;co=aHR0cHM6Ly9pMmhhcmQucnU6NDQz&amp;hl=ru&amp;v=YhkYx1k-yvvb8OonJPmOpoJY&amp;size=normal&amp;cb=yem6ngsze0vb"
-													width="304"
-													height="78"
-													role="presentation"
-													name="a-umd7emflko3l"
-													frameborder="0"
-													scrolling="no"
-													sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-												></iframe>
-											</div>
-											<textarea
-												id="g-recaptcha-response"
-												name="g-recaptcha-response"
-												class="g-recaptcha-response"
-												style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none"
-											></textarea>
-										</div>
-									</div>
-								</div>
-								<div class="form__block">
-									<button disabled class="form__submit input-submit" type="submit" name="Login" value="Войти">Войти</button>
-								</div>
-								<div class="form__block">
-									<div class="form__link form__link_popup">
-										<span>Еще не участник? </span>
-										<a href="#" data-target="register-popup" class="popup__toggle link">Зарегистрироваться</a>
-									</div>
-								</div>
-							</form>
+
+					<div class="delivery-popup__tabs">
+						<a href="" class="delivery-popup__tabs-item delivery-popup__tabs-item_selected">Доставка курьером</a>
+						<a href="" class="delivery-popup__tabs-item">Доставка в ПВЗ</a>
+					</div>
+
+					<div class="delivery-popup__address">
+						<div class="input-with-placeholder">
+							<label for="delivery_address">
+								Город, улица, дом
+								<input type="text" value="" id="delivery_address" placeholder="Город, улица, дом">
+							</label>
+						</div>
+
+						<div class="input-with-placeholder">
+							<label for="delivery_entrance">
+								Подъезд
+								<input type="text" value="" id="delivery_entrance" placeholder="Подъезд">
+							</label>
+						</div>
+
+						<div class="input-with-placeholder">
+							<label for="delivery_floor">
+								Этаж
+								<input type="text" value="" id="delivery_floor" placeholder="Этаж">
+							</label>
+						</div>
+
+						<div class="input-with-placeholder">
+							<label for="delivery_apartment">
+								Квартира
+								<input type="text" value="" id="delivery_apartment" placeholder="Квартира">
+							</label>
 						</div>
 					</div>
-				</div>
-				<div class="popup__footer">
-					<div class="form-openid">
-						<a href="#" class="form-openid__item">
-							<span class="form-openid__item-title">Вконтакте</span><svg width="25" height="15" color="#5181B8"><use xlink:href="#vk"></use></svg></a>
-						<a href="#" class="form-openid__item"
-							><Mail class="Ru">OpenID</Mail><svg width="24" height="25" color="#EE323F"><use xlink:href="#mailru"></use></svg></a>
+
+					<div class="delivery-popup__options">
+						<div class="delivery-popup__options-title">
+							Выберите курьера
+						</div>
+
+
+						<div class="delivery-popup__options-heading">
+							<div></div>
+							<div>Курьер</div>
+							<div>Дата доставки</div>
+							<div>Стоимость</div>
+							<div></div>
+						</div>
+
+						<div class="delivery-popup__options-list">
+							<label class="delivery-popup__options-item" for="courier_1">
+								<div><input type="radio" name="courier" id="courier_1"></div>
+								<div class="delivery-popup__option-title">
+									<div class="delivery-popup__option-img">
+										<img src="img/pickpoint.png" alt="">
+									</div>
+									Pickpoint
+								</div>
+								<div>11 апреля</div>
+								<div>500 ₽</div>
+								<div><a href="#">Подробнее</a></div>
+							</label>
+
+							<label class="delivery-popup__options-item" for="courier_2">
+								<div><input type="radio" name="courier" id="courier_2"></div>
+								<div class="delivery-popup__option-title">
+									<div class="delivery-popup__option-img">
+										<img src="img/cdek.png" alt="">
+									</div>
+									CDEK
+								</div>
+								<div>12 апреля</div>
+								<div>1000 ₽</div>
+								<div><a href="#">Подробнее</a></div>
+							</label>
+
+							<label class="delivery-popup__options-item" for="courier_3">
+								<div><input type="radio" name="courier" id="courier_3"></div>
+								<div class="delivery-popup__option-title">
+									<div class="delivery-popup__option-img">
+										<img src="img/boxberry.png" alt="">
+									</div>
+									BOXBERRY
+								</div>
+								<div>13 апреля</div>
+								<div>250 ₽</div>
+								<div><a href="#">Подробнее</a></div>
+							</label>
+						</div>
+
+						<div class="delivery-popup__button">
+							<a class="button">
+								Выбрать
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+
+
+
+
+
 		<div class="register-popup popup">
 			<div class="popup__wrapper">
 				<div class="popup__body">

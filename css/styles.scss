@@ -63,7 +63,8 @@
 		height: 24px;
 		line-height: 18px;
 		color: #23222a;
-		font-weight: 400;
+		font-weight: 300;
+		width: 100%;
 
 		&::placeholder {
 			color: #87878c;
@@ -307,6 +308,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		cursor: pointer;
 
 		.icon {
 			width: 24px;
@@ -366,6 +368,272 @@
 
 		a {
 			text-decoration: underline;
+		}
+	}
+}
+
+.checkout .cart {
+	&__content-right {
+		flex-basis: 423px;
+	}
+
+	&__content-right-list {
+		margin-top: 0;
+	}
+
+	&__content-right-product-container {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		padding-bottom: 25px;
+	}
+
+	&__content-right-product,
+	&__content-right-service {
+		gap: 12px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__content-right-service-title {
+		padding-left: 76px;
+		flex: 1 1 100%;
+		color: #87878c;
+		font-size: 14px;
+		line-height: 1.4;
+	}
+
+	&__content-right-product-image {
+		width: 64px;
+		height: 64px;
+		flex: 0 0 64px;
+	}
+
+	&__content-right-product-title {
+		color: #23222a;
+		font-weight: 500;
+		line-height: 1.4;
+		font-size: 16px;
+	}
+
+	&__content-right-product-price {
+		text-align: right;
+		flex: 0 0 auto;
+		white-space: nowrap;
+	}
+
+	&__content-right-product-price-total {
+		color: #23222a;
+		font-weight: 700;
+		line-height: 1.4;
+		font-size: 16px;
+	}
+
+	&__content-right-product-price-single {
+		color: #87878c;
+		font-weight: 400;
+		line-height: 1.4;
+		font-size: 14px;
+	}
+
+	&__content-right-list-header {
+		margin-top: 0;
+		padding-top: 25px;
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	&__content-right-list-header-count {
+		color: #87878c;
+		line-height: 1.4;
+		font-size: 14px;
+	}
+
+	&__content-right-list-item-container {
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+	}
+
+	&__content-right-list-item {
+		color: #87878c;
+		line-height: 1.4;
+		margin-top: 0;
+		font-size: 14px;
+	}
+
+	&__content-right-list-item-price {
+		color: #23222a;
+	}
+
+	&__content-right-list-item-price_accent {
+		color: #6d59ff;
+	}
+
+	&__content-right-total {
+		margin-top: 15px;
+		padding-top: 25px;
+		padding-bottom: 35px;
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	&__content-right-btn {
+	}
+}
+
+.delivery-popup {
+	.popup__body {
+		width: 917px;
+	}
+
+	.popup__title {
+		font-weight: 700;
+		margin-bottom: 20px;
+		font-size: 28px;
+		line-height: 1.25;
+	}
+
+	&__tabs {
+		display: flex;
+		gap: 40px;
+		padding-bottom: 40px;
+	}
+
+	&__tabs-item {
+		padding-bottom: 10px;
+		color: #87878c;
+
+		&_selected {
+			border-bottom: 1px solid #6d59ff;
+			color: #6d59ff;
+		}
+	}
+
+	&__address {
+		display: flex;
+		gap: 20px;
+		padding-bottom: 60px;
+
+		.input-with-placeholder:nth-child(1) {
+			flex: 1 1 auto;
+		}
+
+		.input-with-placeholder:nth-child(2) {
+			flex: 0 0 126px;
+		}
+
+		.input-with-placeholder:nth-child(3) {
+			flex: 0 0 126px;
+		}
+
+		.input-with-placeholder:nth-child(4) {
+			flex: 0 0 126px;
+		}
+	}
+
+	&__options {
+	}
+
+	&__options-title {
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 25px;
+	}
+
+	&__options-list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding-bottom: 40px;
+	}
+
+	&__options-heading {
+		display: flex;
+		gap: 20px;
+		padding-bottom: 20px;
+		align-items: center;
+		font-size: 14px;
+		color: #87878c;
+
+		& > div:nth-child(1) {
+			flex: 0 0 20px;
+		}
+
+		& > div:nth-child(2) {
+			flex: 1 1 auto;
+		}
+
+		& > div:nth-child(3) {
+			flex: 0 0 200px;
+		}
+
+		& > div:nth-child(4) {
+			flex: 0 0 150px;
+		}
+
+		& > div:nth-child(5) {
+			flex: 0 0 120px;
+			text-align: right;
+		}
+	}
+
+	&__options-item {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		color: #23222a;
+		font-size: 16px;
+		margin-bottom: 0;
+
+		input[type="radio"] {
+			width: 20px;
+			height: 20px;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+
+		& > div:nth-child(1) {
+			flex: 0 0 20px;
+		}
+
+		& > div:nth-child(2) {
+			flex: 1 1 auto;
+		}
+
+		& > div:nth-child(3) {
+			flex: 0 0 200px;
+		}
+
+		& > div:nth-child(4) {
+			flex: 0 0 150px;
+		}
+
+		& > div:nth-child(5) {
+			flex: 0 0 120px;
+			text-align: right;
+		}
+	}
+
+	&__option-title {
+		font-size: 18px;
+		font-weight: 500;
+		display: flex;
+		gap: 8px;
+		align-items: center;
+	}
+
+	&__option-img {
+		width: 30px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__button {
+		.button {
+			width: 188px;
 		}
 	}
 }
