@@ -494,7 +494,15 @@
 		line-height: 1.25;
 	}
 
-	&__tabs {
+	&__tab {
+		display: none;
+
+		&_open {
+			display: block;
+		}
+	}
+
+	&__tabs-buttons {
 		display: flex;
 		gap: 40px;
 		padding-bottom: 40px;
@@ -635,5 +643,95 @@
 		.button {
 			width: 188px;
 		}
+	}
+}
+
+.delivery-popup {
+	&__pickup-filter {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+
+	&__pickup-filter-item {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		color: #23222a;
+		font-size: 18;
+	}
+
+	&__pickup-filter-item-img {
+		margin-left: 4px;
+		width: 30px;
+		height: 30px;
+	}
+
+	&__pickup-map {
+		iframe,
+		div {
+			width: 100%;
+			height: 665px;
+		}
+	}
+
+	&__pickup-details {
+		padding: 30px 20px;
+		background: #fff;
+		width: 373px;
+		z-index: 100;
+		border: 1px solid #d9d9d9;
+		box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
+
+		.button {
+			width: 100%;
+		}
+
+		.popup__close {
+			top: 24px;
+			right: 20px;
+			mask-size: 9px 9px;
+			width: 9px;
+			height: 9px;
+		}
+	}
+
+	&__pickup-details-title {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-weight: 700;
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+
+	&__pickup-details-img {
+		width: 30px;
+		height: 30px;
+	}
+
+	&__pickup-details-list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		margin-bottom: 20px;
+	}
+
+	&__pickup-details-item {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	&__pickup-details-key {
+		font-size: 14px;
+		color: #87878c;
+		line-height: 1.4;
+	}
+
+	&__pickup-details-value {
+		font-size: 16px;
+		color: #23222a;
+		line-height: 1.4;
 	}
 }

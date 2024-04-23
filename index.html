@@ -640,100 +640,194 @@
 					<div class="popup__title">Способ получения</div>
 					<a href="" class="popup__close"></a>
 
-					<div class="delivery-popup__tabs">
+					<div class="delivery-popup__tabs-buttons">
 						<a href="" class="delivery-popup__tabs-item delivery-popup__tabs-item_selected">Доставка курьером</a>
 						<a href="" class="delivery-popup__tabs-item">Доставка в ПВЗ</a>
 					</div>
 
-					<div class="delivery-popup__address">
-						<div class="input-with-placeholder">
-							<label for="delivery_address">
-								Город, улица, дом
-								<input type="text" value="" id="delivery_address" placeholder="Город, улица, дом">
-							</label>
+					<div class="delivery-popup__tab">
+						<div class="delivery-popup__address">
+							<div class="input-with-placeholder">
+								<label for="delivery_address">
+									Город, улица, дом
+									<input type="text" value="" id="delivery_address" placeholder="Город, улица, дом">
+								</label>
+							</div>
+
+							<div class="input-with-placeholder">
+								<label for="delivery_entrance">
+									Подъезд
+									<input type="text" value="" id="delivery_entrance" placeholder="Подъезд">
+								</label>
+							</div>
+
+							<div class="input-with-placeholder">
+								<label for="delivery_floor">
+									Этаж
+									<input type="text" value="" id="delivery_floor" placeholder="Этаж">
+								</label>
+							</div>
+
+							<div class="input-with-placeholder">
+								<label for="delivery_apartment">
+									Квартира
+									<input type="text" value="" id="delivery_apartment" placeholder="Квартира">
+								</label>
+							</div>
 						</div>
 
-						<div class="input-with-placeholder">
-							<label for="delivery_entrance">
-								Подъезд
-								<input type="text" value="" id="delivery_entrance" placeholder="Подъезд">
-							</label>
-						</div>
+						<div class="delivery-popup__options">
+							<div class="delivery-popup__options-title">
+								Выберите курьера
+							</div>
 
-						<div class="input-with-placeholder">
-							<label for="delivery_floor">
-								Этаж
-								<input type="text" value="" id="delivery_floor" placeholder="Этаж">
-							</label>
-						</div>
+							<div class="delivery-popup__options-heading">
+								<div></div>
+								<div>Курьер</div>
+								<div>Дата доставки</div>
+								<div>Стоимость</div>
+								<div></div>
+							</div>
 
-						<div class="input-with-placeholder">
-							<label for="delivery_apartment">
-								Квартира
-								<input type="text" value="" id="delivery_apartment" placeholder="Квартира">
-							</label>
+							<div class="delivery-popup__options-list">
+								<label class="delivery-popup__options-item" for="courier_1">
+									<div><input type="radio" name="courier" id="courier_1"></div>
+									<div class="delivery-popup__option-title">
+										<div class="delivery-popup__option-img">
+											<img src="img/pickpoint.png" alt="">
+										</div>
+										Pickpoint
+									</div>
+									<div>11 апреля</div>
+									<div>500 ₽</div>
+									<div><a href="#">Подробнее</a></div>
+								</label>
+
+								<label class="delivery-popup__options-item" for="courier_2">
+									<div><input type="radio" name="courier" id="courier_2"></div>
+									<div class="delivery-popup__option-title">
+										<div class="delivery-popup__option-img">
+											<img src="img/cdek.png" alt="">
+										</div>
+										CDEK
+									</div>
+									<div>12 апреля</div>
+									<div>1000 ₽</div>
+									<div><a href="#">Подробнее</a></div>
+								</label>
+
+								<label class="delivery-popup__options-item" for="courier_3">
+									<div><input type="radio" name="courier" id="courier_3"></div>
+									<div class="delivery-popup__option-title">
+										<div class="delivery-popup__option-img">
+											<img src="img/boxberry.png" alt="">
+										</div>
+										BOXBERRY
+									</div>
+									<div>13 апреля</div>
+									<div>250 ₽</div>
+									<div><a href="#">Подробнее</a></div>
+								</label>
+							</div>
+
+							<div class="delivery-popup__button">
+								<a class="button">
+									Выбрать
+								</a>
+							</div>
 						</div>
 					</div>
-
-					<div class="delivery-popup__options">
-						<div class="delivery-popup__options-title">
-							Выберите курьера
-						</div>
-
-
-						<div class="delivery-popup__options-heading">
-							<div></div>
-							<div>Курьер</div>
-							<div>Дата доставки</div>
-							<div>Стоимость</div>
-							<div></div>
-						</div>
-
-						<div class="delivery-popup__options-list">
-							<label class="delivery-popup__options-item" for="courier_1">
-								<div><input type="radio" name="courier" id="courier_1"></div>
-								<div class="delivery-popup__option-title">
-									<div class="delivery-popup__option-img">
-										<img src="img/pickpoint.png" alt="">
-									</div>
-									Pickpoint
+					<div class="delivery-popup__tab delivery-popup__tab_open">
+						<div class="delivery-popup__pickup-filter">
+							<label class="delivery-popup__pickup-filter-item" for="pickup_1">
+								<input type="checkbox" name="" id="pickup_1">
+								<div class="delivery-popup__pickup-filter-item-img">
+									<img src="img/cdek.png" alt="СДЭК">
 								</div>
-								<div>11 апреля</div>
-								<div>500 ₽</div>
-								<div><a href="#">Подробнее</a></div>
+								СДЭК
 							</label>
 
-							<label class="delivery-popup__options-item" for="courier_2">
-								<div><input type="radio" name="courier" id="courier_2"></div>
-								<div class="delivery-popup__option-title">
-									<div class="delivery-popup__option-img">
-										<img src="img/cdek.png" alt="">
-									</div>
-									CDEK
+							<label class="delivery-popup__pickup-filter-item" for="pickup_2">
+								<input type="checkbox" name="" id="pickup_2">
+								<div class="delivery-popup__pickup-filter-item-img">
+									<img src="img/boxberry.png" alt="Boxberry">
 								</div>
-								<div>12 апреля</div>
-								<div>1000 ₽</div>
-								<div><a href="#">Подробнее</a></div>
+								Boxberry
 							</label>
 
-							<label class="delivery-popup__options-item" for="courier_3">
-								<div><input type="radio" name="courier" id="courier_3"></div>
-								<div class="delivery-popup__option-title">
-									<div class="delivery-popup__option-img">
-										<img src="img/boxberry.png" alt="">
-									</div>
-									BOXBERRY
+							<label class="delivery-popup__pickup-filter-item" for="pickup_3">
+								<input type="checkbox" name="" id="pickup_3">
+								<div class="delivery-popup__pickup-filter-item-img">
+									<img src="img/pickpoint.png" alt="Pickpoint">
 								</div>
-								<div>13 апреля</div>
-								<div>250 ₽</div>
-								<div><a href="#">Подробнее</a></div>
+								Pickpoint
 							</label>
 						</div>
+						<div class="delivery-popup__pickup-map">
+							<iframe src="" frameborder="0" style="background: #eee;">
+								deleteme
+							</iframe>
+						</div>
+						<div class="delivery-popup__pickup-details" style="position: absolute; top: 30%; left: 30%;">
+							<div class="delivery-popup__pickup-details-title">
+								<div class="delivery-popup__pickup-details-img">
+									<img src="img/cdek.png" alt="СДЭК">
+								</div>
+								СДЭК на Буракова
+								<a href="" class="popup__close"></a>
+							</div>
 
-						<div class="delivery-popup__button">
-							<a class="button">
-								Выбрать
-							</a>
+							<div class="delivery-popup__pickup-details-list">
+								<div class="delivery-popup__pickup-details-item">
+									<div class="delivery-popup__pickup-details-key">
+										Адрес
+									</div>
+									<div class="delivery-popup__pickup-details-value">
+										Москва, улица Буракова, 27
+									</div>
+								</div>
+
+								<div class="delivery-popup__pickup-details-item">
+									<div class="delivery-popup__pickup-details-key">
+										Время работы
+									</div>
+									<div class="delivery-popup__pickup-details-value">
+										Пн-пт 10:00—20:00, сб-вс выходной
+									</div>
+								</div>
+
+								<div class="delivery-popup__pickup-details-item">
+									<div class="delivery-popup__pickup-details-key">
+										Телефон
+									</div>
+									<div class="delivery-popup__pickup-details-value">
+										8 (800) 201-36-70
+									</div>
+								</div>
+
+								<div class="delivery-popup__pickup-details-item">
+									<div class="delivery-popup__pickup-details-key">
+										Можно забрать
+									</div>
+									<div class="delivery-popup__pickup-details-value">
+										10 апреля — 15 апреля
+									</div>
+								</div>
+
+								<div class="delivery-popup__pickup-details-item">
+									<div class="delivery-popup__pickup-details-key">
+										Доставка
+									</div>
+									<div class="delivery-popup__pickup-details-value">
+										500 ₽
+									</div>
+								</div>
+							</div>
+							<div class="delivery-popup__button">
+								<a class="button">
+									Заберу отсюда
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
