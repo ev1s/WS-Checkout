@@ -195,7 +195,7 @@
 									<div class="tabs__pane tabs__pane_active" role="tabpanel" id="courier" aria-labelledby="courier-tab">
 										<div class="form">
 											<fieldset class="form__fieldset">
-												<legend class="form__legend h2">Контактная информация</legend>
+												<legend class="form__legend h2 mb15">Контактная информация</legend>
 												<p class="hint">
 													Вы можете войти под своим логином, зарегистрироваться или ввести данные в форме ниже. В таком случае аккаунт будет создан автоматически
 												</p>
@@ -260,7 +260,8 @@
 												</div>
 
 												<div class="h4">Выберите тип оплаты</div>
-												<fieldset class="box-radio__fieldset">
+
+												<fieldset class="box-radio__fieldset payments-filter__tab payments-filter__tab_open" data-payments-tab="online">
 													<label class="box-radio">
 														<input class="box-radio__input" type="radio" name="payment" value="sbp" checked="true">
 														<div class="box-radio__container">
@@ -287,6 +288,129 @@
 																	<img src="" alt="">
 																</div>
 																Оплата банковской картой
+															</div>
+															<div class="box-radio__description">
+																Доступные способы онлайн-оплаты: Мир, Visa, Mastercard, СБП, SberPay, Тинькофф, ЮMoney.
+															</div>
+														</div>
+														<a class="box-radio__link">
+															Подробнее
+														</a>
+													</label>
+												</fieldset>
+
+
+
+												<fieldset class="box-radio__fieldset payments-filter__tab" data-payments-tab="credit">
+													<label class="box-radio">
+														<input class="box-radio__input" type="radio" name="payment" value="sbp" checked="true">
+														<div class="box-radio__container">
+															<div class="box-radio__name">
+																<div class="box-radio__image">
+																	<img src="" alt="">
+																</div>
+																Кредит 1
+															</div>
+															<div class="box-radio__description">
+																Быстро и без комиссий. Отсканируйте QR-код с помощью мобильного приложения своего
+															</div>
+														</div>
+														<a class="box-radio__link">
+															Подробнее
+														</a>
+													</label>
+
+													<label class="box-radio">
+														<input class="box-radio__input" type="radio" name="payment" value="card">
+														<div class="box-radio__container">
+															<div class="box-radio__name">
+																<div class="box-radio__image">
+																	<img src="" alt="">
+																</div>
+																Кредит 2
+															</div>
+															<div class="box-radio__description">
+																Доступные способы онлайн-оплаты: Мир, Visa, Mastercard, СБП, SberPay, Тинькофф, ЮMoney.
+															</div>
+														</div>
+														<a class="box-radio__link">
+															Подробнее
+														</a>
+													</label>
+												</fieldset>
+
+
+
+												<fieldset class="box-radio__fieldset payments-filter__tab" data-payments-tab="split">
+													<label class="box-radio">
+														<input class="box-radio__input" type="radio" name="payment" value="sbp" checked="true">
+														<div class="box-radio__container">
+															<div class="box-radio__name">
+																<div class="box-radio__image">
+																	<img src="" alt="">
+																</div>
+																Сплит 1
+															</div>
+															<div class="box-radio__description">
+																Быстро и без комиссий. Отсканируйте QR-код с помощью мобильного приложения своего
+															</div>
+														</div>
+														<a class="box-radio__link">
+															Подробнее
+														</a>
+													</label>
+
+													<label class="box-radio">
+														<input class="box-radio__input" type="radio" name="payment" value="card">
+														<div class="box-radio__container">
+															<div class="box-radio__name">
+																<div class="box-radio__image">
+																	<img src="" alt="">
+																</div>
+																Сплит 2
+															</div>
+															<div class="box-radio__description">
+																Доступные способы онлайн-оплаты: Мир, Visa, Mastercard, СБП, SberPay, Тинькофф, ЮMoney.
+															</div>
+														</div>
+														<a class="box-radio__link">
+															Подробнее
+														</a>
+													</label>
+												</fieldset>
+
+
+
+
+
+
+												<fieldset class="box-radio__fieldset payments-filter__tab" data-payments-tab="business">
+													<label class="box-radio">
+														<input class="box-radio__input" type="radio" name="payment" value="sbp" checked="true">
+														<div class="box-radio__container">
+															<div class="box-radio__name">
+																<div class="box-radio__image">
+																	<img src="" alt="">
+																</div>
+																Бизнес 1
+															</div>
+															<div class="box-radio__description">
+																Быстро и без комиссий. Отсканируйте QR-код с помощью мобильного приложения своего
+															</div>
+														</div>
+														<a class="box-radio__link">
+															Подробнее
+														</a>
+													</label>
+
+													<label class="box-radio">
+														<input class="box-radio__input" type="radio" name="payment" value="card">
+														<div class="box-radio__container">
+															<div class="box-radio__name">
+																<div class="box-radio__image">
+																	<img src="" alt="">
+																</div>
+																Бизнес 2
 															</div>
 															<div class="box-radio__description">
 																Доступные способы онлайн-оплаты: Мир, Visa, Mastercard, СБП, SberPay, Тинькофф, ЮMoney.
@@ -336,7 +460,10 @@
 											<fieldset class="form__fieldset terms">
 												<label class="checkbox assemblies__controls-item">
 													<input class="checkbox__input" type="checkbox" checked="">
-													<span class="checkbox__text">Я соглашаюсь с&nbsp;<a href=""> условиями оферты </a>&nbsp;и&nbsp;<a href="">политикой конфиденциальности</a></span>
+													<span class="checkbox__text">
+														<div class="checkbox__text-inner">
+															Я соглашаюсь с <a href="">условиями оферты</a> и <a href="">политикой конфиденциальности</a></span>
+														</div>
 												</label>
 											</fieldset>
 										</div>
@@ -460,15 +587,17 @@
 											<div class="cart__content-right-product-image">
 												<img src="img/pc1.png" alt="Компьютер игровой WORKSHOP AQUA">
 											</div>
-											<div class="cart__content-right-product-title">
-												Компьютер игровой WORKSHOP AQUA
-											</div>
-											<div class="cart__content-right-product-price">
-												<div class="cart__content-right-product-price-total">
-													517 600 ₽
+											<div class="cart__content-right-product-text">
+												<div class="cart__content-right-product-title">
+													Компьютер игровой WORKSHOP AQUA
 												</div>
-												<div class="cart__content-right-product-price-single">
-													258 800 ₽ х2
+												<div class="cart__content-right-product-price">
+													<div class="cart__content-right-product-price-total">
+														517 600 ₽
+													</div>
+													<div class="cart__content-right-product-price-single">
+														258 800 ₽ х2
+													</div>
 												</div>
 											</div>
 										</div>
@@ -476,12 +605,14 @@
 											<div class="cart__content-right-product-image">
 												<img src="img/pc2.png" alt="Компьютер игровой WORKSHOP AQUA">
 											</div>
-											<div class="cart__content-right-product-title">
-												Компьютер игровой WORKSHOP AQUA
-											</div>
-											<div class="cart__content-right-product-price">
-												<div class="cart__content-right-product-price-total">
-													66 100 ₽
+											<div class="cart__content-right-product-text">
+												<div class="cart__content-right-product-title">
+													Компьютер игровой WORKSHOP AQUA
+												</div>
+												<div class="cart__content-right-product-price">
+													<div class="cart__content-right-product-price-total">
+														66 100 ₽
+													</div>
 												</div>
 											</div>
 										</div>
@@ -489,12 +620,14 @@
 											<div class="cart__content-right-product-image">
 												<img src="img/pc3.png" alt="Компьютер игровой WORKSHOP AQUA">
 											</div>
-											<div class="cart__content-right-product-title">
-												Компьютер игровой WORKSHOP AQUA
-											</div>
-											<div class="cart__content-right-product-price">
-												<div class="cart__content-right-product-price-total">
-													48 100 ₽
+											<div class="cart__content-right-product-text">
+												<div class="cart__content-right-product-title">
+													Компьютер игровой WORKSHOP AQUA
+												</div>
+												<div class="cart__content-right-product-price">
+													<div class="cart__content-right-product-price-total">
+														48 100 ₽
+													</div>
 												</div>
 											</div>
 										</div>
@@ -634,7 +767,7 @@
 
 
 
-		<div class="delivery-popup popup popup_open">
+		<div class="delivery-popup popup">
 			<div class="popup__wrapper">
 				<div class="popup__body popup__body_top-borders">
 					<div class="popup__title">Способ получения</div>
@@ -765,7 +898,7 @@
 						</div>
 						<div class="delivery-popup__pickup-map">
 							<iframe src="" frameborder="0" style="background: #eee;">
-								deleteme
+								delete me
 							</iframe>
 						</div>
 						<div class="delivery-popup__pickup-details" style="position: absolute; top: 30%; left: 30%;">
@@ -839,178 +972,10 @@
 
 
 
-		<div class="register-popup popup">
-			<div class="popup__wrapper">
-				<div class="popup__body">
-					<div class="popup__title">Регистрация</div>
-					<a href="" class="popup__close"></a>
-					<div class="popup__form">
-						<div class="form">
-							<form method="post" action="/articles/?register=yes" name="bform" enctype="multipart/form-data">
-								<input type="hidden" name="AUTH_FORM" value="Y" />
-								<input type="hidden" name="TYPE" value="REGISTRATION" />
-								<div class="form__block">
-									<label for="" class="form__label label">Имя<input
-											type="text"
-											name="USER_NAME"
-											maxlength="255"
-											autocomplete="given-name"
-											placeholder="Александр"
-											value=""
-											class="form__input input-text"
-										/>
-									</label>
-								</div>
-								<div class="form__block">
-									<label for="" class="form__label label"
-										>Фамилия<input
-											type="text"
-											name="USER_LAST_NAME"
-											maxlength="255"
-											autocomplete="family-name"
-											placeholder="Иванов"
-											value=""
-											class="form__input input-text"
-										/>
-									</label>
-								</div>
-								<div class="form__block">
-									<label for="" class="form__label label"
-										>Логин<input
-											type="text"
-											name="USER_LOGIN"
-											maxlength="255"
-											autocomplete="username"
-											placeholder="username"
-											value=""
-											class="form__input input-text"
-										/>
-									</label>
-								</div>
-								<div class="form__block">
-									<label for="" class="form__label label"
-										>E-Mail<input
-											type="email"
-											name="USER_EMAIL"
-											maxlength="255"
-											autocomplete="email"
-											placeholder="user@e-mail.ru"
-											value=""
-											class="form__input input-email"
-										/>
-									</label>
-								</div>
-								<div class="form__block">
-									<label for="" class="form__label label"
-										>Пароль<input
-											type="password"
-											name="USER_PASSWORD"
-											maxlength="255"
-											autocomplete="new-password"
-											placeholder="*******"
-											value=""
-											class="form__input input-password"
-										/>
-									</label>
-								</div>
-								<div class="form__block">
-									<label for="" class="form__label label"
-										>Подтверждение пароля<input
-											type="password"
-											name="USER_CONFIRM_PASSWORD"
-											maxlength="255"
-											autocomplete="new-password"
-											placeholder="*******"
-											value=""
-											class="form__input input-password"
-										/>
-									</label>
-								</div>
-								<div class="form__block">
-									<div class="g-recaptcha" data-sitekey="6LfHhqMUAAAAAE7gWMvMIaXZcwHShP91Q9of4td_">
-										<div style="width: 304px; height: 78px; margin: 0 auto">
-											<div>
-												<iframe
-													title="reCAPTCHA"
-													src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LfHhqMUAAAAAE7gWMvMIaXZcwHShP91Q9of4td_&amp;co=aHR0cHM6Ly9pMmhhcmQucnU6NDQz&amp;hl=ru&amp;v=YhkYx1k-yvvb8OonJPmOpoJY&amp;size=normal&amp;cb=yem6ngsze0vb"
-													width="304"
-													height="78"
-													role="presentation"
-													name="a-umd7emflko3l"
-													frameborder="0"
-													scrolling="no"
-													sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-												></iframe>
-											</div>
-											<textarea
-												id="g-recaptcha-response"
-												name="g-recaptcha-response"
-												class="g-recaptcha-response"
-												style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none"
-											></textarea>
-										</div>
-									</div>
-								</div>
-								<div class="form__block">
-									<input type="submit" name="Register" value="Зарегистрироваться" class="form__submit input-submit" />
-								</div>
-								<div class="form__block">
-									<div class="form__link form__link_popup">
-										<span>Уже зарегистрированы? </span>
-										<a href="#" data-target="login-popup" class="popup__toggle link">Войти</a>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="restore-popup popup">
-			<div class="popup__wrapper">
-				<div class="popup__body">
-					<div class="popup__title">Восстановить пароль</div>
-					<a href="" class="popup__close"></a>
-					<div class="popup__form">
-						<div class="form">
-							<div class="form__block">
-								<div class="form__link">Укажите почту или телефон для восстановления пароля</div>
-							</div>
-							<form name="bform" method="post" target="_top" action="/personal/profile/?forgot_password=yes">
-								<input type="hidden" name="backurl" value="/articles/" />
-								<input type="hidden" name="forgot_password" value="yes" />
-								<input type="hidden" name="AUTH_FORM" value="Y" />
-								<input type="hidden" name="TYPE" value="SEND_PWD" />
-								<div class="form__block">
-									<label for="" class="form__label label"
-										>E-mail или телефон<input type="text" name="USER_LOGIN" maxlength="255" autocomplete="username" value="" class="form__input input-text" />
-									</label>
-								</div>
-								<div class="form__block">
-									<input type="submit" name="send_account_info" value="Выслать" class="form__submit input-submit" />
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="conf-change-profile-popup popup">
-			<div class="popup__wrapper">
-				<div class="popup__body">
-					<a href="" class="popup__close"></a>
-					<div class="popup__title">Изменить профиль?</div>
-					<div class="hint">
-						<p>Настройки собственного профиля не сохранятся.</p>
-						<p>Продолжить?</p>
-					</div>
-					<div class="conf-change-profile-popup__buttons">
-						<div class="button button_light_gray js-popup-close">Отмена</div>
-						<div class="button conf-change-profile-popup__continue">Продолжить</div>
-					</div>
-				</div>
-			</div>
-		</div>
+
+
+
+
 		<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
 			<symbol id="search" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 				<path
@@ -1077,21 +1042,6 @@
 					d="M6.25 6.875V4.375C6.25 3.685 6.81 3.125 7.5 3.125H8.75V0H6.25C4.17875 0 2.5 1.67875 2.5 3.75V6.875H0V10H2.5V20H6.25V10H8.75L10 6.875H6.25Z"
 					fill="#fff"
 				/>
-			</symbol>
-
-			<symbol
-				id="mailru"
-				fill="none"
-				stroke="currentColor"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path d="M0 0h24v24H0z" stroke="none" />
-				<circle cx="12" cy="12" r="4" />
-				<path d="m16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0-5.5 8.28" />
 			</symbol>
 
 			<symbol id="arrow-top" fill="none" viewBox="0 0 8 5" xmlns="http://www.w3.org/2000/svg">
@@ -1241,5 +1191,7 @@
 				/>
 			</symbol>
 		</svg>
+
+		<script src="js/script.js"></script>
 	</body>
 </html>

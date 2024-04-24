@@ -12,7 +12,7 @@
 
 @font-face {
 	font-family: "Euclid Circular B";
-	src: url("../fonts/EuclidCircularB-Bold.woff2") format("woff2"), url("fonts/EuclidCircularB-Bold.woff") format("woff");
+	src: url("fonts/EuclidCircularB-Bold.woff2") format("woff2"), url("fonts/EuclidCircularB-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 }
@@ -2500,7 +2500,7 @@ button:disabled {
 	button,
 	.button,
 	input[type="submit"] {
-		font-size: 12px
+		font-size: 16px
 	}
 }
 
