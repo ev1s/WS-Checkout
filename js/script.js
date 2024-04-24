@@ -38,3 +38,23 @@ notificationOptions.forEach(function (el) {
 	});
 });
 
+let companyId = document.querySelector("#company_id");
+let businessDetails = document.querySelector(".business__details");
+companyId.addEventListener("keyup", function (e) {
+	if(companyId.value.length > 0) {
+		businessDetails.classList.add("business__details_open")
+	} else {
+		businessDetails.classList.remove("business__details_open")
+	}
+});
+
+let businessPaymentsType = Array.from(document.getElementsByClassName("business-type__option"));
+businessPaymentsType.forEach(function (el) {
+	el.addEventListener("click", function (e) {
+		e.preventDefault();
+		businessPaymentsType.forEach(function (e) {
+			e.classList.remove("business-type__option_selected");
+		});
+		this.classList.toggle("business-type__option_selected");
+	});
+});
