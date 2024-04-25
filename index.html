@@ -230,10 +230,43 @@
 											</fieldset>
 											<fieldset class="form__fieldset">
 												<legend class="form__legend h2">Способ получения</legend>
-												<div class="delivery-selector">
-													<input type="hidden" name="shipping" value="pickup" />
+
+												<div class="delivery-selector__initial-body">
+													<div class="delivery-selector delivery-selector_initial delivery-selector_initial-office">
+														<div class="delivery-selector__title">
+															<div class="delivery-selector__name">Самовывоз из офиса <i class="icon icon_pickup"></i></div>
+														</div>
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">Сегодня (1 октября)</div>
+															<div class="delivery-selector__contact-value delivery-selector__contact-value_accent">Бесплатно</div>
+														</div>
+													</div>
+
+													<div class="delivery-selector delivery-selector_initial delivery-selector_initial-courier">
+														<div class="delivery-selector__title">
+															<div class="delivery-selector__name">Курьерская доставка <i class="icon icon_delivery"></i></div>
+														</div>
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">Завтра (2 октября)</div>
+															<div class="delivery-selector__contact-value">от 500 ₽</div>
+														</div>
+													</div>
+
+													<div class="delivery-selector delivery-selector_initial delivery-selector_initial-pickup">
+														<div class="delivery-selector__title">
+															<div class="delivery-selector__name">Доставка в ПВЗ <i class="icon icon_pickup-point"></i></div>
+														</div>
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">17 октября</div>
+															<div class="delivery-selector__contact-value">от 500 ₽</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="delivery-selector delivery-selector_office">
+													<input type="hidden" name="shipping" value="office" />
 													<div class="delivery-selector__title">
-														<div class="delivery-selector__name"><i class="icon icon_pickup"><!-- icon_pickup / icon_delivery / icon_pickup-point --></i> Самовывоз из офиса</div>
+														<div class="delivery-selector__name"><i class="icon icon_pickup"></i> Самовывоз из офиса</div>
 														<a href="#" class="delivery-selector__change">Изменить</a>
 													</div>
 													<div class="delivery-selector__address">г. Москва, Северодвинская ул., 21</div>
@@ -248,6 +281,66 @@
 														</div>
 													</div>
 												</div>
+
+												<div class="delivery-selector delivery-selector_courier">
+													<input type="hidden" name="shipping" value="courier" />
+													<div class="delivery-selector__title">
+														<div class="delivery-selector__name"><i class="icon icon_delivery"></i> Курьерская доставка</div>
+														<a href="#" class="delivery-selector__change">Изменить</a>
+													</div>
+													<div class="delivery-selector__address">г. Москва, ул Лазо, д. 10, кв. 39</div>
+													<div class="delivery-selector__contact-info">
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">Доставка</div>
+															<div class="delivery-selector__contact-value delivery-selector__contact-value_with-img">
+																<div class="delivery-selector__courier-img">
+																	<img src="img/cdek.png" alt="">
+																</div>
+																СДЭК
+															</div>
+														</div>
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">Дата доставки</div>
+															<div class="delivery-selector__contact-value">11 апреля</div>
+														</div>
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">Стоимость</div>
+															<div class="delivery-selector__contact-value">500 ₽</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="delivery-selector delivery-selector_pickup">
+													<input type="hidden" name="shipping" value="pickup" />
+													<div class="delivery-selector__title">
+														<div class="delivery-selector__name"><i class="icon icon_pickup-point"></i> Доставка в ПВЗ</div>
+														<a href="#" class="delivery-selector__change">Изменить</a>
+													</div>
+													<div class="delivery-selector__address">г. Москва, ул. Буракова, 27</div>
+													<div class="delivery-selector__contact-info">
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">Доставка</div>
+															<div class="delivery-selector__contact-value delivery-selector__contact-value_with-img">
+																<div class="delivery-selector__courier-img">
+																	<img src="img/cdek.png" alt="CDEK">
+																</div>
+																СДЭК
+															</div>
+														</div>
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">Дата доставки</div>
+															<div class="delivery-selector__contact-value">11 апреля</div>
+														</div>
+														<div class="delivery-selector__contact-item">
+															<div class="delivery-selector__contact-title">Стоимость</div>
+															<div class="delivery-selector__contact-value">500 ₽</div>
+														</div>
+													</div>
+												</div>
+
+
+
+
 											</fieldset>
 											<fieldset class="form__fieldset">
 												<legend class="form__legend h2">Способ оплаты</legend>
@@ -615,114 +708,6 @@
 											</fieldset>
 										</div>
 									</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-									<div class="tabs__pane" role="tabpanel" id="pickup" aria-labelledby="pickup-tab">iframe</div>
-									<div class="tabs__pane" role="tabpanel" id="post" aria-labelledby="post-tab">
-										<div class="form">
-											<fieldset class="form__fieldset">
-												<legend class="form__legend h4">Контактная информация</legend>
-												<p class="hint">
-													Вы можете войти под своим логином, зарегистрироваться или ввести данные в форме ниже. В таком случае аккаунт будет создан
-													автоматически
-												</p>
-												<div class="mt20">
-													<div class="feed feed_2 feed_indent_20">
-														<div class="feed__item feed__item_100">
-															<div class="form__block">
-																<label for="" class="form__label label">Имя и фамилия<input type="text" value="" class="form__input input-text" /> </label>
-															</div>
-														</div>
-														<div class="feed__item">
-															<div class="form__block">
-																<label for="" class="form__label label">Телефон<input type="text" alue="" class="form__input input-text" /> </label>
-															</div>
-														</div>
-														<div class="feed__item">
-															<div class="form__block">
-																<label for="" class="form__label label">Почта<input type="email" value="" class="form__input input-text" /> </label>
-															</div>
-														</div>
-													</div>
-												</div>
-											</fieldset>
-											<fieldset class="form__fieldset address-form">
-												<legend class="form__legend h4">Адрес доставки</legend>
-												<div class="mt20">
-													<div class="feed feed_3 feed_indent_20">
-														<div class="feed__item">
-															<div class="form__block">
-																<label class="form__label label">Город</label>
-																<div class="form__select">
-																	<select class="form__input">
-																		<option value="Москва">Москва</option>
-																		<option value="Пенза">Пенза</option>
-																	</select>
-																</div>
-															</div>
-														</div>
-														<div class="feed__item feed__item_66">
-															<div class="form__block">
-																<label for="" class="form__label label">Улица<input type="text" alue="" class="form__input input-text" /> </label>
-															</div>
-														</div>
-														<div class="feed__item address-form__home">
-															<div class="form__block">
-																<label for="" class="form__label label">Дом<input type="text" alue="" class="form__input input-text" /> </label>
-															</div>
-														</div>
-														<div class="feed__item address-form__build">
-															<div class="form__block">
-																<label for="" class="form__label label"
-																	>Корпус <span class="desktop-only">или строение</span><input type="text" alue="" class="form__input input-text" />
-																</label>
-															</div>
-														</div>
-														<div class="feed__item">
-															<div class="form__block">
-																<label for="" class="form__label label">Квартира<input type="email" value="" class="form__input input-text" /> </label>
-															</div>
-														</div>
-														<div class="feed__item feed__item_100">
-															<div class="form__block">
-																<label for="" class="form__label label"
-																	>Комментарий, если нужно<input type="text" value="" class="form__input input-text" />
-																</label>
-															</div>
-														</div>
-													</div>
-												</div>
-											</fieldset>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -914,18 +899,18 @@
 
 
 
-		<div class="delivery-popup popup">
+		<div class="delivery-popup popup popup_open">
 			<div class="popup__wrapper">
 				<div class="popup__body popup__body_top-borders">
 					<div class="popup__title">Способ получения</div>
 					<a href="" class="popup__close"></a>
 
 					<div class="delivery-popup__tabs-buttons">
-						<a href="" class="delivery-popup__tabs-item delivery-popup__tabs-item_selected">Доставка курьером</a>
-						<a href="" class="delivery-popup__tabs-item">Доставка в ПВЗ</a>
+						<a href="" data-delivery-popup-target="delivery-popup__tab_courier" class="delivery-popup__tabs-item delivery-popup__tabs-item_selected">Доставка курьером</a>
+						<a href="" data-delivery-popup-target="delivery-popup__tab_pickup" class="delivery-popup__tabs-item">Доставка в ПВЗ</a>
 					</div>
 
-					<div class="delivery-popup__tab">
+					<div class="delivery-popup__tab delivery-popup__tab_courier delivery-popup__tab_open">
 						<div class="delivery-popup__address">
 							<div class="input-with-placeholder">
 								<label for="delivery_address">
@@ -982,6 +967,16 @@
 									<div>500 ₽</div>
 									<div><a href="#">Подробнее</a></div>
 								</label>
+								<div class="delivery-popup__options-mobile-data">
+									<div class="delivery-popup__options-mobile-item">
+										<div class="delivery-popup__options-mobile-title">Дата доставки</div>
+										<div class="delivery-popup__options-mobile-value">11 апреля</div>
+									</div>
+									<div class="delivery-popup__options-mobile-item">
+										<div class="delivery-popup__options-mobile-title">Стоимость</div>
+										<div class="delivery-popup__options-mobile-value">500 ₽</div>
+									</div>
+								</div>
 
 								<label class="delivery-popup__options-item" for="courier_2">
 									<div><input type="radio" name="courier" id="courier_2"></div>
@@ -995,6 +990,16 @@
 									<div>1000 ₽</div>
 									<div><a href="#">Подробнее</a></div>
 								</label>
+								<div class="delivery-popup__options-mobile-data">
+									<div class="delivery-popup__options-mobile-item">
+										<div class="delivery-popup__options-mobile-title">Дата доставки</div>
+										<div class="delivery-popup__options-mobile-value">11 апреля</div>
+									</div>
+									<div class="delivery-popup__options-mobile-item">
+										<div class="delivery-popup__options-mobile-title">Стоимость</div>
+										<div class="delivery-popup__options-mobile-value">500 ₽</div>
+									</div>
+								</div>
 
 								<label class="delivery-popup__options-item" for="courier_3">
 									<div><input type="radio" name="courier" id="courier_3"></div>
@@ -1008,16 +1013,26 @@
 									<div>250 ₽</div>
 									<div><a href="#">Подробнее</a></div>
 								</label>
+								<div class="delivery-popup__options-mobile-data">
+									<div class="delivery-popup__options-mobile-item">
+										<div class="delivery-popup__options-mobile-title">Дата доставки</div>
+										<div class="delivery-popup__options-mobile-value">11 апреля</div>
+									</div>
+									<div class="delivery-popup__options-mobile-item">
+										<div class="delivery-popup__options-mobile-title">Стоимость</div>
+										<div class="delivery-popup__options-mobile-value">500 ₽</div>
+									</div>
+								</div>
 							</div>
 
 							<div class="delivery-popup__button">
-								<a class="button">
+								<a href="#" class="button select_courier">
 									Выбрать
 								</a>
 							</div>
 						</div>
 					</div>
-					<div class="delivery-popup__tab delivery-popup__tab_open">
+					<div class="delivery-popup__tab delivery-popup__tab_pickup">
 						<div class="delivery-popup__pickup-filter">
 							<label class="delivery-popup__pickup-filter-item" for="pickup_1">
 								<input type="checkbox" name="" id="pickup_1">
@@ -1104,7 +1119,7 @@
 								</div>
 							</div>
 							<div class="delivery-popup__button">
-								<a class="button">
+								<a href="#" class="button select_pickup">
 									Заберу отсюда
 								</a>
 							</div>

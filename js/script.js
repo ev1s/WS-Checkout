@@ -58,3 +58,111 @@ businessPaymentsType.forEach(function (el) {
 		this.classList.toggle("business-type__option_selected");
 	});
 });
+
+let deliverySelectors = Array.from(document.getElementsByClassName("delivery-selector__change"));
+let deliveryPopup = document.querySelector(".delivery-popup");
+deliverySelectors.forEach(function (el) {
+	el.addEventListener("click", function (e) {
+		e.preventDefault();
+		deliveryPopup.classList.add("popup_open")
+	});
+});
+
+let deliveryPopupTabsButtons = Array.from(document.getElementsByClassName("delivery-popup__tabs-item"));
+let deliveryPopupTabs = Array.from(document.getElementsByClassName("delivery-popup__tab"));
+deliveryPopupTabsButtons.forEach(function (el) {
+	let target = el.dataset.deliveryPopupTarget;
+
+	el.addEventListener("click", function (e) {
+		e.preventDefault();
+		deliveryPopupTabsButtons.forEach(function (e) {
+			if(e.dataset.deliveryPopupTarget == target) {
+				e.classList.add("delivery-popup__tabs-item_selected");
+			} else {
+				e.classList.remove("delivery-popup__tabs-item_selected");
+			}
+		});
+
+		deliveryPopupTabs.forEach(function (e) {
+			if(e.classList.contains(target)){
+				e.classList.add("delivery-popup__tab_open")
+			} else {
+				e.classList.remove("delivery-popup__tab_open")
+			}
+		});
+	});
+});
+
+function selectDeliveryMethod(target) {
+	console.log(target);
+
+	Array.from(document.getElementsByClassName("popup")).forEach(function (el) {
+		el.classList.remove("popup_open");
+	});
+
+	Array.from(document.getElementsByClassName("delivery-selector")).forEach(function (el) {
+		if(el.classList.contains(target)){
+			el.classList.add("delivery-selector_selected");
+		} else {
+			el.classList.remove("delivery-selector_selected");
+		}
+	});
+}
+
+let selectorCourier = document.querySelector(".select_courier");
+let selectorPickup = document.querySelector(".select_pickup");
+
+selectorPickup.addEventListener("click", function (e) {
+	e.preventDefault();
+	selectDeliveryMethod("delivery-selector_pickup");
+});
+selectorCourier.addEventListener("click", function (e) {
+	e.preventDefault();
+	selectDeliveryMethod("delivery-selector_courier");
+});
+
+let initialSelectors = document.querySelector(".delivery-selector__initial-body");
+let initialSelectorOffice = document.querySelector(".delivery-selector_initial-office");
+let initialSelectorPickup = document.querySelector(".delivery-selector_initial-pickup");
+let initialSelectorCourier = document.querySelector(".delivery-selector_initial-courier");
+
+initialSelectorOffice.addEventListener("click", function (e) {
+	e.preventDefault();
+	initialSelectors.classList.add("delivery-selector__initial-body_hidden");
+	Array.from(document.getElementsByClassName("delivery-selector")).forEach(function (el) {
+		if(el.classList.contains("delivery-selector_office")){
+			el.classList.add("delivery-selector_selected");
+		} else {
+			el.classList.remove("delivery-selector_selected");
+		}
+	});
+});
+initialSelectorPickup.addEventListener("click", function (e) {
+	e.preventDefault();
+	initialSelectors.classList.add("delivery-selector__initial-body_hidden");
+	selectDeliveryMethod("delivery-selector_pickup");
+});
+initialSelectorCourier.addEventListener("click", function (e) {
+	e.preventDefault();
+	initialSelectors.classList.add("delivery-selector__initial-body_hidden");
+	selectDeliveryMethod("delivery-selector_courier");
+});
+
+
+
+
+
+
+
+
+// Можно удалить
+let popupCloseButtons = Array.from(document.getElementsByClassName("popup__close"));
+let popups = Array.from(document.getElementsByClassName("popup"));
+popupCloseButtons.forEach(function (el) {
+	el.addEventListener("click", function (e) {
+		e.preventDefault();
+		popups.forEach(function (e) {
+			e.classList.remove("popup_open");
+		});
+	});
+});
