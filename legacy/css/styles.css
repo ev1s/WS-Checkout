@@ -72,7 +72,7 @@ h2, .h2 {
 .form__label .eye.active:after{
     opacity: 0;
 }
-.bx-authform-input-container .eye.active.
+.bx-authform-input-container .eye.active,
 .form__label .eye.active{
     opacity: 1;
 }
